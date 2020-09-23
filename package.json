@@ -1,0 +1,14 @@
+{
+  "name": "exercices-command-line",
+  "version": "1.0.0",
+  "author": "hephka <franckthevenin95@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "./": "./src/"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "prettier": "^2.1.2"
+  }
+}
