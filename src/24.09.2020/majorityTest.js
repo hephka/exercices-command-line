@@ -27,7 +27,7 @@ if (!isNaN(firstname)) {
 }
 let age_str = readlineSync.question('Age: ')
 let age = Number(age_str)
-if (age === parseInt(age) || age >= 0) {
+if (isNaN(age)) {
     console.log(chalk.red('Error: Vérifiez cette information'))
     process.exit(1)
 }
