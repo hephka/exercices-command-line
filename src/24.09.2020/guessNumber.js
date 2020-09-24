@@ -8,21 +8,23 @@ si le nombre entré par l'utilisateur est plus grand que le nombre secret: 'Nomb
 si le nombre entré par l'utilisateur est égal au nombre secret: 'Bravo!' en vert */
 
 const findNumber = () => {
+    while (true) {
+        let userNumber_str = readlineSync.question('Trouve le nombre caché: ')
+        let userNumber = Number(userNumber_str)
+        if (isNaN(userNumber)) {
+            console.log(chalk.red('Error: Vérifiez cette information'))
+        }
 
-    let userNumber_str = readlineSync.question('Trouve le nombre caché: ')
-    let userNumber = Number(userNumber_str)
-    if (isNaN(userNumber)) {
-        console.log(chalk.red('Error: Vérifiez cette information'))
-    }
-
-    if (userNumber > myNumber) {
-        console.log(chalk.red('Nombre trop grand'))
-    }
-    else if (userNumber < myNumber) {
-        console.log(chalk.red('Nombre trop petit'))
-    }
-    else {
-        console.log(chalk.green('Bravo!'))
+        if (userNumber > myNumber) {
+            console.log(chalk.red('Nombre trop grand'))
+            continue
+        } else if (userNumber < myNumber) {
+            console.log(chalk.red('Nombre trop petit'))
+            continue
+        } else {
+            console.log(chalk.green('Bravo!'))
+            break
+        }
     }
 }
 
