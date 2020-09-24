@@ -42,4 +42,9 @@ const majority = () => {
     }
 }
 
+if (process.argv.length !== 2) {
+    console.log(chalk.red('Usage: node majorityTest.js'))
+    process.exit(1)
+}
+
 majority()
