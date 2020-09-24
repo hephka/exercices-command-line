@@ -1,4 +1,9 @@
-let number = Number(process.argv[2])
+/* Ecrivez un script oddTest.js qui vérifit si l'argument passé en ligne de commande est impair:
+
+% node oddTest.js 7
+7 est un nombre impair
+% node oddTest.js 10
+10 est un nombre pair */
 
 const oddTest = () => {
     return number % 2
@@ -16,4 +21,5 @@ if (process.argv.length !== 3) {
     process.exit(1)
 }
 
+let number = Number(process.argv[2])
 console.log(oddTest())

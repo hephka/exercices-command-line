@@ -1,15 +1,20 @@
-let char = process.argv[2]
-let n1 = Number(process.argv[3])
-let n2 = Number(process.argv[4])
+/* Ecrivez un script calculator.js qui effectue en ligne de commane des opérations arithmétiques simples:
 
-const calculator = () => {
+% node calculator.js + 10 21
+31
+% node calculator.js - 10 1
+9
+% node calculator.js * 5 4
+20
+% node calculator.js / 10 2
+5 */
+
+const calc = () => {
     if (char == '+') {
         return n1 + n2
     } else if (char == '-') {
         return n1 - n2
     } else if (char == '*') {
-        // * non valide, il retourne un array des fichiers de même niveau
-        // '*' valide, mais expérience utilisateur de m****
         return n1 * n2
     } else if (char == '/') {
         return n1 / n2
@@ -28,4 +33,7 @@ if (isNaN(process.argv[3]) && isNaN(process.argv[4])) {
     process.exit(1)
 }
 
-console.log(calculator())
+let char = process.argv[2]
+let n1 = Number(process.argv[3])
+let n2 = Number(process.argv[4])
+console.log(calc())
